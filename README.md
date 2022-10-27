@@ -1,10 +1,16 @@
-# _SiteName_ ~ CodeCrunch 2022
+# _AppName_ ~ CodeCrunch 2022
 
 ## Table of contents
 
 &emsp;[1. Team Details](#team-details)
 
 &emsp;[2. Work Status](#work-status)
+
+&emsp;[3. Getting Started](#getting-started)
+
+&emsp;[4. Learn More](#learn-more)
+
+&emsp;[5. Deploy on Vercel](#deploy-on-vercel)
 
 ## Team Details
 
@@ -20,9 +26,9 @@
 ## Work Status
 
 -   Youtube: **Completed**
--   Twitter: **Completed**
+-   Stack overflow: **Completed**
 -   Github: **In progress**
--   Stack overflow: **In progress**
+-   Twitter: **In progress**
 -   Google: **In progress**
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
