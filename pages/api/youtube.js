@@ -1,5 +1,6 @@
 var BASE_URL = new URL("https://youtube.googleapis.com/youtube/v3/search");
-var API_KEY = "AIzaSyAMcdITbonRnXHp42cCDUFH37-sHZv6r08";
+// var API_KEY = "AIzaSyAMcdITbonRnXHp42cCDUFH37-sHZv6r08";
+var API_KEY = "AIzaSyDKioTZlaB3PsEVBHETnIGsqHWUuGodIlk";
 var MAX_RESULTS = 15;
 
 export default async function handler(req, res) {

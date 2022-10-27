@@ -7,6 +7,11 @@ import { v4 } from "uuid";
 import StackOverflowCard from "../../components/StackOverflowCard";
 import YoutubeCard from "../../components/YoutubeCard";
 
+function htmlDecode(input) {
+    var doc = new DOMParser().parseFromString(input, "text/html");
+    return doc.documentElement.textContent;
+}
+
 export default function Home({ data }) {
     console.log(data);
     let { youtube, stackoverflow, github, twitter } = data;
@@ -38,11 +43,11 @@ export default function Home({ data }) {
 
             <section className="searchResults max-w-6xl mx-auto px-8 my-8">
                 <div className="youtube mb-12">
-                    <h2 className="text-3xl">
+                    <h2 className="md:text-3xl text-xl">
                         Results from Youtube for <strong>"{keyword}"</strong>
                     </h2>
 
-                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
+                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
                         {youtube.items.map((video) => (
                             <YoutubeCard
                                 key={v4()}

@@ -10,11 +10,11 @@ function YoutubeCard({
     videoId,
 }) {
     return (
-        <div className="youtubeCard w-72 transition-all hover:bg-[#17181a] p-4 rounded-lg shrink-0">
+        <div className="youtubeCard w-72 transition-all hover:bg-[#17181a] p-4 rounded-lg shrink-0 overflow-hidden">
             <a href={`https://www.youtube.com/watch?v=${videoId}`}>
                 <img
                     src={thumbnailImage}
-                    className="w-full h-auto max-w-full"
+                    className="w-full h-auto max-w-full rounded-3xl object-fill"
                 />
             </a>
             {/* <Image
