@@ -1,21 +1,18 @@
-module.exports = {
-    get_google_search_response: async function (keyword, max_results = 10) {
-        require("dotenv").config();
+var BASE_URL = new URL('https://www.googleapis.com/customsearch/v1');
+var GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+var SEARCH_ENGINE_ID = "875116038a99f4a6c";
+var MAX_RESULTS = 9;
 
-        const base_url = new URL("https://www.googleapis.com/customsearch/v1");
-        const search_engine_id = "875116038a99f4a6c";
-        const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+export default async function handler(req, res) {
+    let { keyword } = req.query;
 
-        base_url.searchParams.set("q", keyword);
-        base_url.searchParams.set("cx", search_engine_id);
-        base_url.searchParams.set("key", GOOGLE_API_KEY);
-        base_url.searchParams.set("num", max_results);
+    BASE_URL.searchParams.set("q", keyword);
+    BASE_URL.searchParams.set("cx", SEARCH_ENGINE_ID);
+    BASE_URL.searchParams.set("key", GOOGLE_API_KEY);
+    BASE_URL.searchParams.set("num", MAX_RESULTS);
+    console.log(BASE_URL);
+    let response = await fetch(BASE_URL);
+    let result = await response.json();
 
-        const response = await fetch(base_url)
-            .then((response) => response.json())
-            .then((json) => console.log(json));
-
-        console.log(base_url);
-        return response;
-    },
-};
+    res.status(200).json(result);
+}

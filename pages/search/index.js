@@ -7,6 +7,7 @@ import { v4 } from "uuid";
 import GithubCard from "../../components/GithubCard";
 import StackOverflowCard from "../../components/StackOverflowCard";
 import YoutubeCard from "../../components/YoutubeCard";
+import GoogleCard from "../../components/GoogleCard";
 
 function htmlDecode(input) {
     var doc = new DOMParser().parseFromString(input, "text/html");
@@ -15,7 +16,7 @@ function htmlDecode(input) {
 
 export default function Home({ data }) {
     console.log(data);
-    let { youtube, stackoverflow, github, twitter } = data;
+    let { youtube, stackoverflow, github, twitter, google } = data;
     const router = useRouter();
     const { keyword } = router.query;
 
@@ -109,6 +110,23 @@ export default function Home({ data }) {
                     </div>
                 </div>
 
+                <div className="google mb-12 ">
+                    <h2 className="text-3xl">
+                        Results from Google for{" "}
+                        <strong>"{keyword}"</strong>
+                    </h2>
+
+                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
+                        {google.items.map((question) => (
+                            <GoogleCard
+                                title={question.title}
+                                link={question.link}
+                                snippet={question.snippet}
+                            ></GoogleCard>
+                        ))}
+                    </div>
+                </div>
+
                 <div className="twitter mb-12 ">
                     <h2 className="text-3xl">
                         Results from Twitter for <strong>"{keyword}"</strong>
@@ -143,12 +161,17 @@ export async function getServerSideProps(context) {
     const github = await fetch(
         `http://localhost:3000/api/github/?keyword=${keyword}`
     );
+    const google = await fetch(
+        `http://localhost:3000/api/google/?keyword=${keyword}`
+    );
+
     // const data = await res.json();
     const data = {
         youtube: await youtube.json(),
         stackoverflow: await stackoverflow.json(),
         github: await github.json(),
         twitter: await twitter.json(),
+        google: await google.json(),
     };
     // const data = {};
 
