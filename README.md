@@ -35,6 +35,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Install packages:
+```
+npm install     # install dependencies in package.json
+```
+
 First, run the development server:
 
 ```bash
@@ -68,18 +73,22 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Application User Interface
 
-* **YouTube search**
+-   **YouTube search**
 
 &emsp;&emsp;![Alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/640px-YouTube_social_white_square_%282017%29.svg.png)
 
-* **Google search**
+-   **Google search**
 
 &emsp;&emsp;![Alt text](https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1)
 
-* **StackOverflow search**
+-   **StackOverflow search**
 
-&emsp;&emsp;![Alt text](https://miro.medium.com/max/1200/0*UEtwA2ask7vQYW06.png)
+&emsp;&emsp;![Alt text](./resources/stack_overflow_UI_1.jpeg)
 
-* **GitHub search**
+-   **GitHub search**
 
-&emsp;&emsp;![Alt text](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
+&emsp;&emsp;![Alt text](./resources/GitHub_logo1.png)
+
+-   **Twitter search**
+
+&emsp;&emsp;![Alt text](./resources/twitter_UI_temp.jpeg)

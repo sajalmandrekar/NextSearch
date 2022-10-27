@@ -69,20 +69,7 @@ export default function Home({ data }) {
                     </div>
                 </div>
 
-                <div className="twitter mb-12 ">
-                    <h2 className="text-3xl">
-                        Results from Twitter for <strong>"{keyword}"</strong>
-                    </h2>
-
-                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
-                        {twitter.statuses.map((tweet) => (
-                            <TwitterTweetEmbed
-                                key={v4()}
-                                tweetId={tweet.id_str}
-                            />
-                        ))}
-                    </div>
-                </div>
+                
 
                 <div className="stackoverflow mb-12 ">
                     <h2 className="text-3xl">
@@ -101,6 +88,21 @@ export default function Home({ data }) {
                                 link={question.link}
                                 tags={question.tags}
                             ></StackOverflowCard>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="twitter mb-12 ">
+                    <h2 className="text-3xl">
+                        Results from Twitter for <strong>"{keyword}"</strong>
+                    </h2>
+
+                    <div className="cards flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
+                        {twitter.statuses.map((tweet) => (
+                            <TwitterTweetEmbed
+                                key={v4()}
+                                tweetId={tweet.id_str}
+                            />
                         ))}
                     </div>
                 </div>

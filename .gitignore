@@ -38,3 +38,6 @@ next-env.d.ts
 
 /pages/test.js
 /pages/youtube.js
+
+#ignore temporary notes
+notes.txt
