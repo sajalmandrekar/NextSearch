@@ -1,4 +1,4 @@
-# _SiteName_ ~ CodeCrunch 2022
+# _AppName_ ~ CodeCrunch 2022
 
 ## Table of contents
 
