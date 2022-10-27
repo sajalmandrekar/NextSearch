@@ -6,6 +6,12 @@
 
 &emsp;[2. Work Status](#work-status)
 
+&emsp;[3. Getting Started](#getting-started)
+
+&emsp;[4. Learn More](#learn-more)
+
+&emsp;[5. Deploy on Vercel](#deploy-on-vercel)
+
 ## Team Details
 
 -   Team Name: **_TheTriad_**
