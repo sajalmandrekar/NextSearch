@@ -34,10 +34,14 @@ function StackOverflowCard({
                 <div className="tags">
                     Tags:
                     {tags.map((tag) => (
-                        <span className="p-1 bg-blue-300 text-black text-xs ml-2 rounded">
+                        <span className="p-1 bg-blue-300 text-black text-xs ml-2 rounded text-center min-w-[150px]">
                             {tag}
                         </span>
                     ))}
+                </div>
+                <div className="text-xs text-secondary text-right">
+                    <span className="mr-1 votes">{view_count} views</span>
+                    <span className="mr-1 votes">{answer_count} answers</span>
                 </div>
             </div>
         </div>

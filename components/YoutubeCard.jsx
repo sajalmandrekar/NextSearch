@@ -26,7 +26,7 @@ function YoutubeCard({
             /> */}
             <div className="channelmeta my-4">
                 <h3
-                    className="video__title text-lg mb-2"
+                    className="video__title font-semibold text-lg mb-2"
                     style={{
                         display: "-webkit-box",
                         "-webkit-line-clamp": "2",

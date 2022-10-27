@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 // import TweetEmbed from "react-tweet-embed";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 import { v4 } from "uuid";
+import GithubCard from "../../components/GithubCard";
 import StackOverflowCard from "../../components/StackOverflowCard";
 import YoutubeCard from "../../components/YoutubeCard";
 
@@ -69,8 +70,6 @@ export default function Home({ data }) {
                     </div>
                 </div>
 
-                
-
                 <div className="stackoverflow mb-12 ">
                     <h2 className="text-3xl">
                         Results from StackOverflow for{" "}
@@ -88,6 +87,24 @@ export default function Home({ data }) {
                                 link={question.link}
                                 tags={question.tags}
                             ></StackOverflowCard>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="github mb-12 ">
+                    <h2 className="text-3xl">
+                        Results from Github for <strong>"{keyword}"</strong>
+                    </h2>
+
+                    <div className="cards flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 items-stretch ">
+                        {github.items.map((repo) => (
+                            <GithubCard
+                                owner={repo.owner}
+                                description={repo.description}
+                                stargazers_count={repo.stargazers_count}
+                                name={repo.name}
+                                key={v4()}
+                            />
                         ))}
                     </div>
                 </div>
