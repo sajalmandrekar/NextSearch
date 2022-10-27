@@ -1,3 +1,30 @@
+# _SiteName_ ~ CodeCrunch 2022
+
+## Table of contents
+
+&emsp;[1. Team Details](#team-details)
+
+&emsp;[2. Work Status](#work-status)
+
+## Team Details
+
+-   Team Name: **_TheTriad_**
+-   Team Members:
+
+&emsp;&emsp;1. _Mohammed Afaan Sajjad Hussain Shaikh (afaan.shaikh.21@gmail.com)_
+
+&emsp;&emsp;2. _Sai Sameer Kumar Lolla (saisameer.lolla@gmail.com)_
+
+&emsp;&emsp;3. _Sajal Mandrekar (sajalmandrekar@gmail.com)_
+
+## Work Status
+
+-   Youtube: **Completed**
+-   Twitter: **Completed**
+-   Github: **In progress**
+-   Stack overflow: **In progress**
+-   Google: **In progress**
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -22,8 +49,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
