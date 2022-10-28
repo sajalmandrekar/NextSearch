@@ -1,4 +1,4 @@
-# _AppName_ ~ CodeCrunch 2022
+# _NextSearch_ ~ CodeCrunch 2022
 
 ## Table of contents
 
@@ -64,11 +64,11 @@ yarn dev
 
 ###   **Google**
 
-&emsp;&emsp;![Alt text](https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1)
+&emsp;&emsp;![Alt text](./resources/Google_UI.png)
 
 ###   **StackOverflow**
 
-&emsp;&emsp;![Alt text](./resources/stack_overflow_UI_1.jpeg)
+&emsp;&emsp;![Alt text](./resources/stack_overflow_UI.png)
 
 ###   **GitHub**
 
@@ -76,4 +76,4 @@ yarn dev
 
 ###   **Twitter**
 
-&emsp;&emsp;![Alt text](./resources/twitter_UI_temp.jpeg)
+&emsp;&emsp;![Alt text](./resources/twitter_UI.png)

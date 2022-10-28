@@ -32,7 +32,7 @@ export default function Home({ data }) {
             </Head>
 
             <nav className="search  p-4 w-full flex items-center space-x-4 border-b ">
-                <h1 className="text-3xl font-bold">Google</h1>
+                <h1 className="text-3xl font-bold">NextSearch</h1>
                 <form action="search" method="get">
                     <input
                         type="text"
