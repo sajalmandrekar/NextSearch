@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    distDir: "buildnew",
     reactStrictMode: true,
     swcMinify: true,
     images: {
