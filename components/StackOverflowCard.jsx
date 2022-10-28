@@ -9,27 +9,21 @@ function StackOverflowCard({
     tags,
 }) {
     return (
-        <div className="stackoverflowcard border border-gray-400 rounded-lg px-4 py-4 flex items-center space-x-4 shrink-0 max-w-md">
-            <div className="right text-xs flex flex-col justify-items-center whitespace-nowrap">
-                <span className="votes">{view_count} views</span>
-                <span className="votes">{answer_count} answers</span>
-            </div>
-            <div className="left">
+        <div className="stackoverflowcard github shrink-0 bg-white text-black border-gray-400 border px-4 py-4 w-[400px] max-w-sm rounded-lg shadow shadow-white flex justify-between flex-col gap-2">
+            <div className="top">
                 <a
-                    className="text-lg font-semibold inline-block mb-3"
+                    className="font-semibold inline-block mb-3 hover:underline"
                     href={link}
                 >
-                    {title}
+                    {title.replaceAll("&#39;", "'")}
                 </a>
-                <div className="userData flex mb-2">
+                <div className="userData flex mb-2 text-sm">
                     <img
                         src={owner.profile_image}
                         alt="dp"
-                        width="20px"
-                        height="20px"
-                        className="rounded-full object-cover"
+                        className="rounded-full object-cover block w-6 h-6"
                     />
-                    <span className="inline-block ml-1">
+                    <span className="inline-block ml-2">
                         {owner.display_name}
                     </span>
                 </div>
@@ -44,10 +38,10 @@ function StackOverflowCard({
                         </span>
                     ))}
                 </div>
-                <div className="text-xs text-secondary text-right">
-                    <span className="mr-1 votes">{view_count} views</span>
-                    <span className="mr-1 votes">{answer_count} answers</span>
-                </div>
+            </div>
+            <div className="text-xs text-secondary text-right mt-2">
+                <span className="mr-1 votes">{view_count} views</span>
+                <span className="mr-1 votes">{answer_count} answers</span>
             </div>
         </div>
     );

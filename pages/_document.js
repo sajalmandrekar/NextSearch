@@ -12,6 +12,10 @@ export default function Document() {
                     rel="stylesheet"
                     href="https://fonts.googleapis.com/icon?family=Material+Icons"
                 />
+                <meta
+                    http-equiv="Content-Type"
+                    content="text/html; charset=utf-8"
+                />
             </Head>
             <body className="bg-black text-white">
                 <Main />

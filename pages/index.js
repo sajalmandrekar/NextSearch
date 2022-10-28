@@ -36,7 +36,7 @@ export default function Home() {
             ></img> */}
 
             <section className="max-w-5xl mx-auto flex flex-col justify-center items-center relative">
-                <h1 className="lg:text-9xl md:text-7xl text-4xl text-white mb-4 leading-normal font-bold">
+                <h1 className="lg:text-9xl md:text-7xl text-4xl text-white mb-8 leading-normal font-bold">
                     NextSearch
                 </h1>
                 <form action="search" method="get" className="w-full">
