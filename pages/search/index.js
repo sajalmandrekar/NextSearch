@@ -132,7 +132,7 @@ export default function Home({ data }) {
                         Results from Twitter for <strong>"{keyword}"</strong>
                     </h2>
 
-                    <div className="cards flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
+                    <div className="cards items-stretch flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
                         {twitter.statuses.map((tweet) => (
                             <TwitterTweetEmbed
                                 key={v4()}
