@@ -1,7 +1,4 @@
-<div style="display:flex; gap:10px">
-                <img src="./public/favicon.png" alt="icon" width="100" height="100" />
-                <p style="font-size:4rem; font-weight:bold;">NextSearch</p>
-</div>
+<img src="./resources/Readme_header.png" alt="icon" />
 
 # 
 _A Multi-search web app which displays Youtube, stackoverflow, Github, Google and Twitter search results in a single place_
