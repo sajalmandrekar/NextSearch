@@ -207,7 +207,7 @@ export async function getServerSideProps(context) {
     const { keyword } = context.query;
 
     const youtube = await fetch(
-        `http://localhost:3000/api/youtube/?keyword=${keyword}`
+        `https://nextsearch.netlify.app/api/youtube/?keyword=${keyword}`
     );
     const stackoverflow = await fetch(
         `https://nextsearch.netlify.app/api/stackoverflow/?keyword=${keyword}`
