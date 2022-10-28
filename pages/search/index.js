@@ -46,7 +46,8 @@ export default function Home({ data }) {
             <section className="searchResults max-w-6xl mx-auto px-8 my-8">
                 <div className="youtube mb-12">
                     <h2 className="md:text-3xl text-xl">
-                        Results from Youtube for <strong>"{keyword}"</strong>
+                        Results from Youtube for{" "}
+                        <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
                     <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
@@ -74,7 +75,7 @@ export default function Home({ data }) {
                 <div className="stackoverflow mb-12 ">
                     <h2 className="text-3xl">
                         Results from StackOverflow for{" "}
-                        <strong>"{keyword}"</strong>
+                        <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
                     <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
@@ -94,7 +95,8 @@ export default function Home({ data }) {
 
                 <div className="github mb-12 ">
                     <h2 className="text-3xl">
-                        Results from Github for <strong>"{keyword}"</strong>
+                        Results from Github for{" "}
+                        <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
                     <div className="cards flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 items-stretch ">
@@ -105,6 +107,7 @@ export default function Home({ data }) {
                                 stargazers_count={repo.stargazers_count}
                                 name={repo.name}
                                 key={v4()}
+                                repo_url={repo.html_url}
                             />
                         ))}
                     </div>
@@ -113,7 +116,7 @@ export default function Home({ data }) {
                 <div className="google mb-12 ">
                     <h2 className="text-3xl">
                         Results from Google for{" "}
-                        <strong>"{keyword}"</strong>
+                        <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
                     <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
@@ -122,6 +125,7 @@ export default function Home({ data }) {
                                 title={question.title}
                                 link={question.link}
                                 snippet={question.snippet}
+                                key={v4()}
                             ></GoogleCard>
                         ))}
                     </div>
@@ -129,7 +133,8 @@ export default function Home({ data }) {
 
                 <div className="twitter mb-12 ">
                     <h2 className="text-3xl">
-                        Results from Twitter for <strong>"{keyword}"</strong>
+                        Results from Twitter for{" "}
+                        <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
                     <div className="cards items-stretch flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">

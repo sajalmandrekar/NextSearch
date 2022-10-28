@@ -29,8 +29,8 @@ function YoutubeCard({
                     className="video__title font-semibold text-lg mb-2"
                     style={{
                         display: "-webkit-box",
-                        "-webkit-line-clamp": "2",
-                        "-webkit-box-orient": "vertical",
+                        WebkitLineClamp: "2",
+                        WebkitBoxOrient: "vertical",
                         overflow: "hidden",
                     }}
                     title={title}

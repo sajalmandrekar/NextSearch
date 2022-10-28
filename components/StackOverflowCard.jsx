@@ -1,3 +1,5 @@
+import { v4 } from "uuid";
+
 function StackOverflowCard({
     title,
     owner,
@@ -34,7 +36,10 @@ function StackOverflowCard({
                 <div className="tags">
                     Tags:
                     {tags.map((tag) => (
-                        <span className="p-1 bg-blue-300 text-black text-xs ml-2 rounded text-center min-w-[150px]">
+                        <span
+                            className="p-1 bg-blue-300 text-black text-xs ml-2 rounded text-center min-w-[150px]"
+                            key={v4()}
+                        >
                             {tag}
                         </span>
                     ))}
