@@ -13,7 +13,7 @@ export default function Document() {
                     href="https://fonts.googleapis.com/icon?family=Material+Icons"
                 />
                 <meta
-                    http-equiv="Content-Type"
+                    httpEquiv="Content-Type"
                     content="text/html; charset=utf-8"
                 />
             </Head>
