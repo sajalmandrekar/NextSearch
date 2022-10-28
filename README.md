@@ -1,4 +1,5 @@
 # _NextSearch_ ~ CodeCrunch 2022
+_A Multi-search web app which displays Youtube, stackoverflow, Github, Google and Twitter search results in a single place_
 
 Hosted URLs:
 
@@ -14,6 +15,8 @@ https://nextsearch5.herokuapp.com/
 &emsp;[3. Getting Started](#getting-started)
 
 &emsp;[4. Application User Interface](#application-user-interface)
+
+&emsp;[5. Mobile Experience](#mobile-experience)
 
 ## Team Details
 
@@ -85,3 +88,8 @@ yarn dev
 ###   **Twitter**
 
 &emsp;&emsp;![twitter](./resources/twitter_UI.png)
+
+## Mobile Experience
+
+&emsp;&emsp;<img src="./resources/mobile_home1.png" alt="Alt text" title="Optional title" height=600px>
+&emsp;&emsp;&emsp;&emsp;<img src="./resources/mobile_search1.png" alt="Alt text" title="Optional title" height=600px>
