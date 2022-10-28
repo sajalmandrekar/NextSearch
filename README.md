@@ -25,7 +25,7 @@ https://nextsearch5.herokuapp.com/
 -   Team Name: **_TheTriad_**
 -   Team Members:
 
-&emsp;&emsp;1. _Mohammed Afaan Sajjad Hussain Shaikh (afaan.shaikh.21@gmail.com)_
+&emsp;&emsp;1. _Mohammed Afaan Shaikh (afaan.shaikh.21@gmail.com)_
 
 &emsp;&emsp;2. _Sai Sameer Kumar Lolla (saisameer.lolla@gmail.com)_
 
