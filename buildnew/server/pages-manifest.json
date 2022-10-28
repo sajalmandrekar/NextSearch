@@ -1,0 +1,14 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/api/google": "pages/api/google.js",
+  "/api/stackoverflow": "pages/api/stackoverflow.js",
+  "/api/twitter": "pages/api/twitter.js",
+  "/api/youtube": "pages/api/youtube.js",
+  "/api/github": "pages/api/github.js",
+  "/": "pages/index.html",
+  "/youtube": "pages/youtube.js",
+  "/search": "pages/search.js",
+  "/404": "pages/404.html"
+}
