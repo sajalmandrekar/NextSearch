@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     BASE_URL.searchParams.set("q", keyword);
     BASE_URL.searchParams.set("cx", SEARCH_ENGINE_ID);
     BASE_URL.searchParams.set("key", GOOGLE_API_KEY);
-    BASE_URL.searchParams.set("num", MAX_RESULTS);
+    //BASE_URL.searchParams.set("num", MAX_RESULTS);
     console.log(BASE_URL);
     let response = await fetch(BASE_URL);
     let result = await response.json();
