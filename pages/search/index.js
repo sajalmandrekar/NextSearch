@@ -16,7 +16,7 @@ function htmlDecode(input) {
 }
 
 export default function Home({ data }) {
-    console.log(data);
+    // console.log(data);
     let { youtube, stackoverflow, github, twitter, google } = data;
     const router = useRouter();
     const { keyword } = router.query;
@@ -56,26 +56,38 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
-                        {youtube.items.map((video) => (
-                            <YoutubeCard
-                                key={v4()}
-                                thumbnailImage={
-                                    video.snippet.thumbnails.high.url
-                                }
-                                width={
-                                    video.snippet.thumbnails.high.width || 450
-                                }
-                                height={
-                                    video.snippet.thumbnails.high.height || 320
-                                }
-                                title={video.snippet.title}
-                                channelName={video.snippet.channelTitle}
-                                description={video.snippet.description}
-                                videoId={video.id.videoId}
-                            ></YoutubeCard>
-                        ))}
-                    </div>
+                    {console.log(youtube)}
+
+                    {youtube.items ? (
+                        <div>
+                            <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
+                                {youtube.items.map((video) => (
+                                    <YoutubeCard
+                                        key={v4()}
+                                        thumbnailImage={
+                                            video.snippet.thumbnails.high.url
+                                        }
+                                        width={
+                                            video.snippet.thumbnails.high
+                                                .width || 450
+                                        }
+                                        height={
+                                            video.snippet.thumbnails.high
+                                                .height || 320
+                                        }
+                                        title={video.snippet.title}
+                                        channelName={video.snippet.channelTitle}
+                                        description={video.snippet.description}
+                                        videoId={video.id.videoId}
+                                    ></YoutubeCard>
+                                ))}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="text-lg my-12 text-center text-gray-500 ">
+                            No matching results found :(
+                        </div>
+                    )}
                 </div>
 
                 <div className="stackoverflow mb-12 ">
@@ -84,19 +96,27 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
-                        {stackoverflow.items.map((question) => (
-                            <StackOverflowCard
-                                key={v4()}
-                                title={question.title}
-                                owner={question.owner}
-                                view_count={question.view_count}
-                                answer_count={question.answer_count}
-                                link={question.link}
-                                tags={question.tags}
-                            ></StackOverflowCard>
-                        ))}
-                    </div>
+                    {stackoverflow.items && stackoverflow.items.length ? (
+                        <div>
+                            <div className="cards flex items-stretch space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
+                                {stackoverflow.items.map((question) => (
+                                    <StackOverflowCard
+                                        key={v4()}
+                                        title={question.title}
+                                        owner={question.owner}
+                                        view_count={question.view_count}
+                                        answer_count={question.answer_count}
+                                        link={question.link}
+                                        tags={question.tags}
+                                    ></StackOverflowCard>
+                                ))}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="text-lg my-12 text-center text-gray-500 ">
+                            No matching results found :(
+                        </div>
+                    )}
                 </div>
 
                 <div className="github mb-12 ">
@@ -105,18 +125,26 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 items-stretch ">
-                        {github.items.map((repo) => (
-                            <GithubCard
-                                owner={repo.owner}
-                                description={repo.description}
-                                stargazers_count={repo.stargazers_count}
-                                name={repo.name}
-                                key={v4()}
-                                repo_url={repo.html_url}
-                            />
-                        ))}
-                    </div>
+                    {github.items && github.items.length ? (
+                        <div>
+                            <div className="cards flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 items-stretch ">
+                                {github.items.map((repo) => (
+                                    <GithubCard
+                                        owner={repo.owner}
+                                        description={repo.description}
+                                        stargazers_count={repo.stargazers_count}
+                                        name={repo.name}
+                                        key={v4()}
+                                        repo_url={repo.html_url}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="text-lg my-12 text-center text-gray-500 ">
+                            No matching results found :(
+                        </div>
+                    )}
                 </div>
 
                 <div className="google mb-12 ">
@@ -125,16 +153,26 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
-                        {google.items.map((question) => (
-                            <GoogleCard
-                                title={question.title}
-                                link={question.link}
-                                snippet={question.snippet}
-                                key={v4()}
-                            ></GoogleCard>
-                        ))}
-                    </div>
+                    {/* {console.log(google.items)} */}
+
+                    {google.items && google.items.length ? (
+                        <div>
+                            <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
+                                {google.items.map((question) => (
+                                    <GoogleCard
+                                        title={question.title}
+                                        link={question.link}
+                                        snippet={question.snippet}
+                                        key={v4()}
+                                    ></GoogleCard>
+                                ))}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="text-lg my-12 text-center text-gray-500 ">
+                            No matching results found :(
+                        </div>
+                    )}
                 </div>
 
                 <div className="twitter mb-12 ">
@@ -143,14 +181,22 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards items-stretch flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
-                        {twitter.statuses.map((tweet) => (
-                            <TwitterTweetEmbed
-                                key={v4()}
-                                tweetId={tweet.id_str}
-                            />
-                        ))}
-                    </div>
+                    {twitter.statuses && twitter.statuses.length ? (
+                        <div>
+                            <div className="cards items-stretch flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
+                                {twitter.statuses.map((tweet) => (
+                                    <TwitterTweetEmbed
+                                        key={v4()}
+                                        tweetId={tweet.id_str}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="text-lg my-12 text-center text-gray-500 ">
+                            No matching results found :(
+                        </div>
+                    )}
                 </div>
             </section>
         </div>
@@ -161,7 +207,7 @@ export async function getServerSideProps(context) {
     const { keyword } = context.query;
 
     const youtube = await fetch(
-        `https://nextsearch.netlify.app/api/youtube/?keyword=${keyword}`
+        `http://localhost:3000/api/youtube/?keyword=${keyword}`
     );
     const stackoverflow = await fetch(
         `https://nextsearch.netlify.app/api/stackoverflow/?keyword=${keyword}`
@@ -185,6 +231,8 @@ export async function getServerSideProps(context) {
         google: await google.json(),
     };
     // const data = {};
+
+    console.log(youtube);
 
     return {
         props: { data }, // will be passed to the page component as props

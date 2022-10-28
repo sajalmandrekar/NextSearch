@@ -9,6 +9,11 @@ export default async function handler(req, res) {
     BASE_URL.searchParams.set("maxResults", MAX_RESULTS);
     BASE_URL.searchParams.set("key", API_KEY);
 
+    // console.log(
+    //     "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" +
+    //         BASE_URL
+    // );
+
     let response = await fetch(BASE_URL);
     let result = await response.json();
 
