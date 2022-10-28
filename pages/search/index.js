@@ -84,7 +84,7 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards items-stretch flex  space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
+                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
                         {stackoverflow.items.map((question) => (
                             <StackOverflowCard
                                 key={v4()}
@@ -105,7 +105,7 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 items-stretch ">
+                    <div className="cards flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 items-stretch ">
                         {github.items.map((repo) => (
                             <GithubCard
                                 owner={repo.owner}
@@ -125,7 +125,7 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards flex items-stretch space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
+                    <div className="cards flex items-center space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
                         {google.items.map((question) => (
                             <GoogleCard
                                 title={question.title}
@@ -143,7 +143,7 @@ export default function Home({ data }) {
                         <strong>&quot;{keyword}&quot;</strong>
                     </h2>
 
-                    <div className="cards items-stretch flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar-thin scrollbar-thumb-gray-500 ">
+                    <div className="cards items-stretch flex space-x-4 nowrap py-4 overflow-x-auto w-full scrollbar scrollbar-thumb-gray-500 ">
                         {twitter.statuses.map((tweet) => (
                             <TwitterTweetEmbed
                                 key={v4()}

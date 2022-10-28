@@ -1,5 +1,10 @@
 # _NextSearch_ ~ CodeCrunch 2022
 
+Hosted URLs:
+
+https://nextsearch.netlify.app/ 
+
+https://nextsearch5.herokuapp.com/
 ## Table of contents
 
 &emsp;[1. Team Details](#team-details)
@@ -58,22 +63,25 @@ yarn dev
 
 ## Application User Interface
 
+### **Home Page**
+&emsp;&emsp;![home page](./resources/home_page_UI_1.png)
+
 ###   **YouTube**
 
-&emsp;&emsp;![Alt text](./resources/youtube_search_UI.png)
+&emsp;&emsp;![youtube](./resources/youtube_search_UI.png)
 
 ###   **Google**
 
-&emsp;&emsp;![Alt text](./resources/Google_UI.png)
+&emsp;&emsp;![google](./resources/Google_UI.png)
 
 ###   **StackOverflow**
 
-&emsp;&emsp;![Alt text](./resources/stack_overflow_UI.png)
+&emsp;&emsp;![stack overflow](./resources/stack_overflow_UI.png)
 
 ###   **GitHub**
 
-&emsp;&emsp;![Alt text](./resources/github_search_UI.png)
+&emsp;&emsp;![github](./resources/github_search_UI.png)
 
 ###   **Twitter**
 
-&emsp;&emsp;![Alt text](./resources/twitter_UI.png)
+&emsp;&emsp;![twitter](./resources/twitter_UI.png)
